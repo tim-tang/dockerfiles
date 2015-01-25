@@ -44,4 +44,5 @@ RUN chmod +x /*.sh
 RUN cat /etc/oracle-release
 
 EXPOSE 22
+EXPOSE 1521
 CMD ["/run.sh"]
