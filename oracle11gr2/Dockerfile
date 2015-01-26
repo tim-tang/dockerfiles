@@ -38,7 +38,10 @@ RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N 
 # Add scripts
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
+ADD dbora /etc/init.d/
 RUN chmod +x /*.sh
+RUN chmod 750 /etc/init.d/dbora
+RUN chkconfig --add /etc/init.d/dbora 
 
 # confirm
 RUN cat /etc/oracle-release
