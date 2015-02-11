@@ -11,6 +11,7 @@ RUN yum install -y vim-minimal
 RUN yum install -y wget
 RUN cd /etc/yum.repos.d \
  && wget http://public-yum.oracle.com/public-yum-ol6.repo
+RUN yum install glibc.i686
 RUN yum install -y oracle-rdbms-server-12cR1-preinstall
 
 # create oracle installation directories
@@ -19,7 +20,7 @@ RUN mkdir -p /opt/app/oracle/product/12.1.0/db_1 \
  &&  chmod -R 775 /opt
 
 # set environment variables
-RUN su - oracle
+#RUN su - oracle
 RUN echo "export TMP=/tmp;" >> /home/oracle/.bashrc \
  && echo "export TMPDIR=/tmp;" >>  /home/oracle/.bashrc \
  && echo "export ORACLE_HOSTNAME=orcl11g.cn.oracle.com;"  >> /home/oracle/.bashrc \
