@@ -6,7 +6,7 @@ if [ -f /.root_pw_set ]; then
 fi
 
 # Your root password
-PASS=******** 
+PASS=rootme99
 echo "root:$PASS" | chpasswd
 
 echo "=> Done!"
