@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # chkconfig: 345 99 10
 # description: Oracle auto start-stop script.
 #
@@ -8,7 +8,7 @@
 # Set ORA_OWNER to the user id of the owner of the
 # Oracle database in ORA_HOME.
 
-ORA_HOME=/opt/app/oracle/product/12.1.0/db_1
+ORA_HOME=/opt/app/oracle/product/11.2.0/db_1
 ORA_OWNER=oracle
 
 if [ ! -f $ORA_HOME/bin/dbstart ]
