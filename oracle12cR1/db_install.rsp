@@ -34,7 +34,7 @@ oracle.install.option=INSTALL_DB_AND_CONFIG
 # first hostname found on the system. (e.g., for systems with multiple hostnames 
 # and network interfaces)
 #-------------------------------------------------------------------------------
-ORACLE_HOSTNAME=orcl12c.cn.oracle.com
+ORACLE_HOSTNAME=tim.tang-linux
 
 #-------------------------------------------------------------------------------
 # Specify the Unix group to be set for the inventory directory.  
@@ -88,7 +88,7 @@ SELECTED_LANGUAGES=en
 #-------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Home. 
 #-------------------------------------------------------------------------------
-ORACLE_HOME=/opt/app/oracle/product/12c/db_1
+ORACLE_HOME=/opt/app/oracle/product/12.1.0/db_1
 
 #-------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Base. 
@@ -249,7 +249,7 @@ oracle.install.db.config.PDBName=
 #  KO16MSWIN949, ZHS16GBK, TH8TISASCII, ZHT32EUC, ZHT16MSWIN950,
 #  ZHT16HKSCS, WE8ISO8859P9, TR8MSWIN1254, VN8MSWIN1258
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.characterSet=
+oracle.install.db.config.starterdb.characterSet=AL32UTF8
 
 #------------------------------------------------------------------------------
 # This variable should be set to true if Automatic Memory Management 
@@ -257,7 +257,7 @@ oracle.install.db.config.starterdb.characterSet=
 # If Automatic Memory Management is not desired, and memory allocation
 # is to be done manually, then set it to false.
 #------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.memoryOption=AL32UTF8
+oracle.install.db.config.starterdb.memoryOption=true
 
 #-------------------------------------------------------------------------------
 # Specify the total memory allocation for the database. Value(in MB) should be
@@ -265,7 +265,7 @@ oracle.install.db.config.starterdb.memoryOption=AL32UTF8
 # on the system.
 # Example: oracle.install.db.config.starterdb.memoryLimit=512
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.memoryLimit=1024
+oracle.install.db.config.starterdb.memoryLimit=3172
 
 #-------------------------------------------------------------------------------
 # This variable controls whether to load Example Schemas onto
@@ -290,27 +290,27 @@ oracle.install.db.config.starterdb.installExampleSchemas=true
 # This variable holds the password that is to be used for all schemas in the
 # starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.ALL=********
+oracle.install.db.config.starterdb.password.ALL=Rootme99
 
 #-------------------------------------------------------------------------------
 # Specify the SYS password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYS=********
+oracle.install.db.config.starterdb.password.SYS=Rootme99
 
 #-------------------------------------------------------------------------------
 # Specify the SYSTEM password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYSTEM=********
+oracle.install.db.config.starterdb.password.SYSTEM=Rootme99
 
 #-------------------------------------------------------------------------------
 # Specify the DBSNMP password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.DBSNMP=********
+oracle.install.db.config.starterdb.password.DBSNMP=Rootme99
 
 #-------------------------------------------------------------------------------
 # Specify the PDBADMIN password required for creation of Pluggable Database in the Container Database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.PDBADMIN=********
+oracle.install.db.config.starterdb.password.PDBADMIN=Rootme99
 
 #-------------------------------------------------------------------------------
 # Specify the management option to use for managing the database.

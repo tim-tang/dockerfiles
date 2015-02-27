@@ -16,21 +16,21 @@ RUN yum install -y oracle-rdbms-server-12cR1-preinstall
 
 # create oracle installation directories
 RUN mkdir -p /opt/app/oracle/product/12.1.0/db_1 \
- && chown -R oracle:oinstall /opt \
- &&  chmod -R 775 /opt
+ && chown -R oracle:oinstall /opt/app \
+ &&  chmod -R 775 /opt/app
 
 # set environment variables
 #RUN su - oracle
 RUN echo "export TMP=/tmp;" >> /home/oracle/.bashrc \
  && echo "export TMPDIR=/tmp;" >>  /home/oracle/.bashrc \
- && echo "export ORACLE_HOSTNAME=orcl11g.cn.oracle.com;"  >> /home/oracle/.bashrc \
+ && echo "export ORACLE_HOSTNAME=orcl12c.cn.oracle.com;"  >> /home/oracle/.bashrc \
  && echo "export ORACLE_UNQNAME=orcl;" >> /home/oracle/.bashrc \
  && echo "export ORACLE_BASE=/opt/app/oracle;" >> /home/oracle/.bashrc \
  && echo "export ORACLE_HOME=/opt/app/oracle/product/12.1.0/db_1;" >> /home/oracle/.bashrc \
  && echo "export ORACLE_SID=orcl;" >> /home/oracle/.bashrc \
  && echo "export PATH=/opt/app/oracle/product/12.1.0/db_1/bin:$PATH;" >> /home/oracle/.bashrc \
  && echo "export LD_LIBRARY_PATH=/opt/app/oracle/product/12.1.0/db_1/lib:/lib:/usr/lib; " >> /home/oracle/.bashrc \
- && echo "export CLASSPATH=/opt/app/oracle/product/11.2.0/db_1/jlib:$/opt/app/oracle/product/11.2.0/db_1/rdbms/jlib;" >> /home/oracle/.bashrc 
+ && echo "export CLASSPATH=/opt/app/oracle/product/12.1.0/db_1/jlib:$/opt/app/oracle/product/12.1.0/db_1/rdbms/jlib;" >> /home/oracle/.bashrc 
 
 # Install packages and set up sshd
 RUN yum -y install openssh-server
