@@ -43,6 +43,7 @@ ADD dbora /etc/init.d/
 RUN chmod +x /*.sh
 RUN chmod 750 /etc/init.d/dbora
 RUN chkconfig --add /etc/init.d/dbora 
+RUN chkconfig dbora on
 
 # confirm
 RUN cat /etc/oracle-release
